@@ -23,15 +23,22 @@ function traerDatos(){
                 res.innerHTML += `
                 <tr>
                 <th scope="row">${mdata[i].objectid}</th>
-                <td>${mdata[i].properties.Construction["COSAPI-COTA_INFERIOR"]}</td>
+                <td>${mdata[i].properties.Text["Ele_Tipo"]}</td>
+                <td>${mdata[i].properties.Text["Ele_Nivel"]}</td>
+                <td>${mdata[i].properties.Text["Ele_Material"]}</td>
+                <td>${mdata[i].properties.Construction["COSAPI-RUBRO"]}</td>
+                <td>${mdata[i].properties.Construction["COSAPI-COTA_SUPERIOR"]}</td>
                 <td>${mdata[i].properties.Construction["COSAPI-COTA_INFERIOR"]}</td>
                 <td>${mdata[i].properties.Dimensions["Altura"]}</td>
+                <td>${mdata[i].properties.Dimensions["Volume"]}</td>
                 <td>${mdata[i].properties.Dimensions["COSAPI-IRREGULAR"]}</td>
                 </tr>                
                 
                 `
             }
         }
+        
+       /*  $('#tabla').DataTable();  */
     }
 
 }
