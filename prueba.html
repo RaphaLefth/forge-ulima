@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!-- DataTable -->
+  <link rel="stylesheet" href="DataTables/datatables.min.css">
+
+  <!-- Autodesk Forge Viewer files -->
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+  <title>Lista de Items</title>
+</head>
+<body>
+  <header id="main-header" class="bg-info text-white p-4 mb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <h1 id="header-title">Lista de Objetos</h1>
+        </div>
+        <!-- <div class="col-md-6 align-self-center">
+          <input type="text" class="form-control" id="filtro"
+          placeholder="Buscar item...">
+        </div> -->
+      </div>            
+    </div>  
+  </header>
+<div class="container">
+  <table class="table display table-bordered dataTable no-footer" id="tabla" role="grid" aria-describedby="tabla_info">
+    <thead class="thead-dark">
+      <tr role="row"><th scope="col" class="sorting sorting_asc" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" aria-sort="ascending" aria-label="ID : activate to sort column descending" style="width: 23.3333px;">ID </th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 40.6667px;" aria-label="Tipo: activate to sort column ascending">Tipo</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 46px;" aria-label="Nivel: activate to sort column ascending">Nivel</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 72.6667px;" aria-label="Material: activate to sort column ascending">Material</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 55.3333px;" aria-label="Rubro: activate to sort column ascending">Rubro</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 118px;" aria-label="Cota Superior: activate to sort column ascending">Cota Superior</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 108.667px;" aria-label="Cota Inferior: activate to sort column ascending">Cota Inferior</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 55.3333px;" aria-label="Altura: activate to sort column ascending">Altura</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 78px;" aria-label="Volumen: activate to sort column ascending">Volumen</th><th scope="col" class="sorting" tabindex="0" aria-controls="tabla" rowspan="1" colspan="1" style="width: 76.6667px;" aria-label="Irregular: activate to sort column ascending">Irregular</th></tr>
+    </thead>
+    <tbody id="res">
+                <tr>
+                <th scope="row">11021</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11023</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11025</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11027</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11029</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11031</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11228</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>214.430</td>
+                <td>210.130</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11246</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>214.430</td>
+                <td>210.130</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11260</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>214.430</td>
+                <td>210.130</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11266</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>218.730</td>
+                <td>214.430</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11278</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>218.730</td>
+                <td>214.430</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11284</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>218.730</td>
+                <td>214.430</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11288</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>218.730</td>
+                <td>214.430</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11294</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>218.730</td>
+                <td>214.430</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11304</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>223.030</td>
+                <td>218.730</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11316</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>223.030</td>
+                <td>218.730</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11326</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>223.030</td>
+                <td>218.730</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11332</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>223.030</td>
+                <td>218.730</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11336</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>223.030</td>
+                <td>218.730</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11342</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11344</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11346</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11350</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.940 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11354</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11364</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.940 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11366</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.926 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11368</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11372</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">11374</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12565</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12567</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12569</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12571</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.194 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12573</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.190 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12575</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.194 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12577</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.190 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12583</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>1.923 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12585</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12587</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12649</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12651</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12653</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12655</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12677</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12679</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.194 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12687</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12689</th>
+                <td>Columna</td>
+                <td>1 Piso</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>210.130</td>
+                <td>204.130</td>
+                <td>6.000 m</td>
+                <td>3.840 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12693</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>214.430</td>
+                <td>210.130</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12695</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>214.430</td>
+                <td>210.130</td>
+                <td>4.300 m</td>
+                <td>2.752 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12699</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">12701</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>200.140</td>
+                <td>3.990 m</td>
+                <td>2.554 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">17840</th>
+                <td>Columna</td>
+                <td></td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>227.630</td>
+                <td>223.030</td>
+                <td>4.600 m</td>
+                <td>2.944 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">20201</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.186 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">65375</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.140</td>
+                <td>4.990 m</td>
+                <td>3.194 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">101929</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.850</td>
+                <td>4.279 m</td>
+                <td>2.735 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">101931</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.850</td>
+                <td>4.279 m</td>
+                <td>2.739 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                
+                <tr>
+                <th scope="row">101933</th>
+                <td>Columna</td>
+                <td>Sotano</td>
+                <td>Concreto</td>
+                <td>CONCRETO</td>
+                <td>204.130</td>
+                <td>199.850</td>
+                <td>4.279 m</td>
+                <td>2.739 m^3</td>
+                <td>No</td>
+                </tr>                
+                
+                </tbody>
+
+  </table>  
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<!-- DataTables -->
+<script src="DataTables/datatables.min.js"></script>
+<script src="js/viewerForge.js"></script>
+<script src="js/activarDTablas.js"></script>
+<script src="ajax.js"></script>
+<script src="app.js"></script>
+<script>
+   $('#tabla').DataTable(); 
+</script>
+</body>
+</html>
