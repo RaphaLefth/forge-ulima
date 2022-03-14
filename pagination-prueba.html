@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>.: COSAPI - Valorización Equipo :.</title>
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+        type="text/css">
+    <link href="/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/layout.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/components.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/global_assets/css/" rel="stylesheet" type="text/css"> -->
+    <link href="/assets/css/colors.min.css" rel="stylesheet" type="text/css">
+    <link href="/css/Style.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script src="/global_assets/js/main/jquery.min.js"></script>
+    <script src="/global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="/global_assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script src="/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script src="/global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script src="/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script src="/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script src="/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script src="/global_assets/js/plugins/pickers/daterangepicker.js"></script>
+
+    <script src="/assets/js/app.js"></script>
+    <script src="/global_assets/js/demo_pages/dashboard.js"></script>
+    <!-- /theme JS files -->
+    <!-- Theme JS files -->
+    <script src="/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script src="/global_assets/js/plugins/tables/datatables/extensions/fixed_columns.min.js"></script>
+    <script src="/global_assets/js/plugins/notifications/pnotify.min.js"></script>
+    <script src="/global_assets/js/plugins/notifications/bootbox.min.js"></script>
+    <script src="/global_assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script src="/global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+    <script src="/global_assets/js/demo_pages/datatables_extension_fixed_columns.js"></script>
+    <script src="/js/funciones.js"></script>
+    <script src="/js/CosapiGrid.js"></script>
+    <script src="/js/Sortable.js"></script>
+    <script src="/js/numerico.js"></script>
+    <!-- Theme JS files -->
+    <script src="/global_assets/js/plugins/pagination/bs_pagination.min.js"></script>
+    <!--     @*
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" />*@ -->
+
+    <script type="text/javascript" src="/Content/Handsontable/handsontable.full.min.js"></script>
+    <script type="text/javascript" src="/Content/Handsontable/languages/es-MX.js"></script>
+    <link rel="stylesheet" href="/Content/Handsontable/handsontable.full.min.css" />
+    <script src="/global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script src="/global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script src="/global_assets/js/plugins/forms/styling/switch.min.js"></script>
+
+    <script src="/Content/SweetAlert/sweetalert.min.js"></script>
+    <script src="/Content/SweetAlert/jquery.sweet-alert.custom.js"></script>
+    <!-- Js tree -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
+    <!-- Links del proyecto -->
+    <!-- Autodesk Forge Viewer files -->
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
+        type="text/css">
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+    <!-- this project files -->
+    <!--  <link href="css/main.css" rel="stylesheet" /> -->
+    <script src="js/forge-js/ForgeTree.js"></script>
+    <script src="js/forge-js/ForgeViewer.js"></script>
+    <!-- Extensiones -->
+    <script src="/js/myawesomeextension_2.js"></script>
+    <script src="/js/handleselectionextension.js"></script>
+    <script src="/js/myawesomeextension.js"></script>
+    <!-- <script src="/js/mychangecolorapi.js"></script> -->
+    <!-- <script src="/js/MyColorExtension.js"></script> -->
+
+
+
+    <!-- Adicional para ver fechas en Handsontable -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday@1.8.2/pikaday.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday@1.8.2/css/pikaday.css">
+    <!-- Export to excel -->
+    <script type="text/javascript" src="js/exportExcel/libs/js-xlsx/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="js/exportExcel/libs/FileSaver/FileSaver.min.js"></script>
+    <script type="text/javascript" src="js/exportExcel/tableExport.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@8.0.0/dist/handsontable.full.min.js"></script>
+    <link type="text/css" rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/handsontable@8.0.0/dist/handsontable.full.min.css">
+    <style>
+        .pages {
+            /* margin-top: 15px; */
+            float: right;
+        }
+
+        .myBt {
+            background: #5C6BC0;
+            color: #FFF;
+            width: 30px;
+            font: 0.8em Helvetica;
+            border: 2px solid #3F51B5;
+            border-radius: 2px;
+            margin: 1px;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="sidebar-xs">
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-expand-md navbar-dark">
+        <div class="navbar-brand">
+            <a href="/" class="d-inline-block">
+                <img src="/global_assets/images/cosapi.png" style="width: 80px; height:35px;" alt="">
+            </a>
+        </div>
+
+        <div class="d-md-none">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+                <i class="icon-tree5"></i>
+            </button>
+            <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+                <i class="icon-paragraph-justify3"></i>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-mobile">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+                        <i class="icon-paragraph-justify3"></i>
+                    </a>
+                </li>
+
+            </ul>
+            <span class="legend ml-md-3 mr-md-auto"><strong>CR3003 - U. de Lima.</strong></span>
+
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+
+
+                    <div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-300">
+                        <div class="dropdown-content-header">
+                            <span class="font-weight-semibold">Users online</span>
+                            <a href="#" class="text-default"><i class="icon-search4 font-size-base"></i></a>
+                        </div>
+
+
+
+                        <div class="dropdown-content-footer bg-light">
+                            <a href="#" class="text-grey mr-auto">All users</a>
+                            <a href="#" class="text-grey"><i class="icon-gear"></i></a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dropdown-user">
+                    <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+                        data-toggle="dropdown">
+                        <img src="/global_assets/images/placeholders/usuario.png" class="rounded-circle mr-2"
+                            height="34" alt="">
+                        <span>
+                            Raphael
+                        </span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="/Account/LogOut" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main sidebar -->
+        <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+            <!-- Sidebar mobile toggler -->
+            <div class="sidebar-mobile-toggler text-center">
+                <a href="#" class="sidebar-mobile-main-toggle">
+                    <i class="icon-arrow-left8"></i>
+                </a>
+                Navigation
+                <a href="#" class="sidebar-mobile-expand">
+                    <i class="icon-screen-full"></i>
+                    <i class="icon-screen-normal"></i>
+                </a>
+            </div>
+            <!-- /sidebar mobile toggler -->
+            <!-- Sidebar content -->
+            <div class="sidebar-content">
+
+                <!-- User menu -->
+                <div class="sidebar-user">
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="mr-3">
+                                <a href="#"><img src="/global_assets/images/placeholders/usuario.png" width="38"
+                                        height="38" class="rounded-circle" alt=""></a>
+                            </div>
+
+                            <div class="media-body">
+                                <div class="media-title font-weight-semibold">Raphael</div>
+                                <div class="font-size-xs opacity-50">
+                                    <i class="icon-pin font-size-sm"></i> &nbsp;CR3081
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /user menu -->
+                <!-- Main navigation -->
+                <div class="card card-sidebar-mobile">
+                    <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                        <!-- Main -->
+                        <li class="nav-item-header">
+                            <div class="text-uppercase font-size-xs line-height-xs">Menú</div> <i class="icon-menu"
+                                title="Main"></i>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">
+                                <i class="icon-home4"></i>
+                                <span>
+                                    Inicio
+                                </span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link"><i class="icon-graph"></i> <span>Reportes</span></a>
+
+                            <ul class="nav nav-group-sub" data-submenu-title="Reportes">
+                                <li class="nav-item"><a href="http://localhost:3000/reporteavance.html"
+                                        class="nav-link active">Reporte
+                                        seguimiento
+                                        requerimientos</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+            <!-- /sidebar content -->
+
+        </div>
+        <!-- /main sidebar -->
+        <div class="content-wrapper">
+
+            <div class="content">
+                <div class="card">
+                    <div class="content" id="example1"></div>
+                    <div class="content pages"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Main content -->
+
+
+
+
+
+
+
+
+    </div>
+    <!-- /main content -->
+
+    </div>
+
+    <!-- /page content -->
+
+    <script>
+        $(document).ready(function () {
+            /* $.get("http://localhost:3500/getElements", function (serverData1, status) {
+                console.log('estoy en maquinaria');
+                /* listaMaquinaria = serverData1; 
+                var myRows = Array.from(serverData1.keys())
+                console.log(myRows);
+                var example = document.getElementById('example1');
+                var hot = new Handsontable(example, {
+                    data: serverData1,
+                    colWidths: 100,
+                    width: '100%',
+                    height: 750,
+                    rowHeights: 50,
+                    rowHeaders: true,
+                    colHeaders: true,
+                    hiddenRows: {
+                        rows: myRows
+                    }
+                });
+
+                document.getElementById('export-file').addEventListener('click', function () {
+                    hot.updateSettings({ hiddenRows: false })
+                    hot.getPlugin('exportFile').downloadFile('csv', {
+                        filename: 'MyFile'
+                    });
+                    hot.updateSettings({ hiddenRows: { rows: myRows } });
+                    hot.render()
+                });
+            }); */
+            $.ajax({
+                url: 'http://localhost:3500/getElements',
+                type: "GET",
+                async: true,
+                cache: false,
+                contentType: "application/json",
+                success: function (response) {
+
+                    var myRows = Array.from(response.keys())
+                    console.log(myRows);
+                    var example = document.getElementById('example1'), hot;
+                    var hot = new Handsontable(example, {
+                        language: 'es-MX',
+                        readOnly: true,
+                        data: response,
+                        stretchH: 'all',
+                        colWidths: 100,
+                        /* width: auto, */
+                        height: 600,
+                        rowHeights: 100,
+                        rowHeaders: true,
+                        colHeaders: true,
+                        contextMenu: false,
+                        multiColumnSorting: true,
+                        filters: true,
+                        dropdownMenu: ["filter_by_condition",
+                            "filter_operators",
+                            "filter_by_value",
+                            "filter_action_bar"],
+                        search: {
+                            searchResultClass: 'FondoSearch'
+                        },
+                        search: true,
+                        licenseKey: 'non-commercial-and-evaluation',
+                        /* hiddenRows: {
+                            rows: getArray(1),
+                            indicators: false
+                        } */
+                    });
+                    var rowsOnSinglePage = 50;
+                    var pages = document.querySelector('.pages');
+                    var card = document.getElementsByClassName('card');
+                    var afterFilterSet = hot.getData();
+                    hot.updateSettings({
+                        afterFilter: function () {
+                            afterFilterSet = hot.getData();
+                            pages.innerHTML = '';
+                            createPages(rowsOnSinglePage);
+                            hot.updateSettings({
+                                hiddenRows: {
+                                    rows: getArray(1),
+                                    indicators: false
+                                }
+                            })
+                        }
+                    });
+
+                    function createPages(rowsOnSinglePage) {
+                        var bt, els = Math.ceil(afterFilterSet.length / rowsOnSinglePage);
+
+                        for (var i = 0; i < els; i++) {
+                            //solo mostrar 10 elementos
+                            if (i < 10) {
+                                bt = document.createElement('button');
+                                bt.innerHTML = i + 1;
+                                bt.className = 'btn btn-default';
+
+                                bt.addEventListener('click', function (e) {
+                                    card[1].removeChild(pages);
+                                    var el = e.target;
+
+                                    var page = el.innerHTML;
+                                    console.log(page);
+
+                                    var start = (page - 1) * rowsOnSinglePage;
+                                    var end = start + rowsOnSinglePage;
+                                    console.log('inicio: ' + start + ' fin: ' + end);
+                                    hot.updateSettings({
+                                        hiddenRows: {
+                                            rows: getArray(start, end),
+                                            indicators: false
+                                        }
+                                    })
+                                    /* for (var j = page - 4; j < page + 5; j++) {
+                                        bt.innerHTML = j;
+                                        pages.appendChild(bt);
+                                        console.log('hola');
+                                    } */
+                                    if (page > 5 || page < els - 5) {
+                                        bt = document.createElement('button');
+
+                                        bt.className = 'btn btn-default';
+                                        for (var j = page - 5; j < page + 4; j++) {
+                                            bt.innerHTML = j + 1;
+                                            pages.appendChild(bt);
+                                            console.log('hola');
+                                        }
+                                    }
+                                });
+
+                                pages.appendChild(bt);
+
+
+                            }
+
+                            /* bt = document.createElement('BUTTON');
+                            bt.className = 'myBt';
+                            bt.innerHTML = i + 1;
+                            pages.appendChild(bt); */
+                        }
+                        console.log('cree el paginado');
+                    };
+
+                    createPages(rowsOnSinglePage); //we define how many rows should be on a single page
+
+                    pages.addEventListener('click', function (e) {
+                        var clicked = e.target.innerHTML;
+                        if (e.taget !== pages) {
+                            hot.updateSettings({
+                                hiddenRows: {
+                                    rows: getArray(clicked),
+                                    indicators: false
+                                }
+                            })
+                        }
+                    });
+
+                    function getArray(clicked) {
+                        var parts = pages.childElementCount;
+                        var arr = [];
+
+                        if (clicked === 1) {
+                            for (var i = (clicked * rowsOnSinglePage); i < afterFilterSet.length; i++) {
+                                arr.push(i);
+                            }
+                            return arr;
+                        } else {
+                            for (var j = 0; j < (clicked * rowsOnSinglePage) - rowsOnSinglePage; j++) {
+                                arr.push(j);
+                            }
+                            for (var i = (clicked * rowsOnSinglePage); i < afterFilterSet.length; i++) {
+                                arr.push(i);
+                            }
+                            return arr;
+                        }
+                    }
+
+                    hot.updateSettings({
+                        hiddenRows: {
+                            rows: getArray(1),
+                            indicators: false
+                        }
+                    });
+                }
+            })
+
+        });
+
+
+    </script>
+</body>
+
+</html>
